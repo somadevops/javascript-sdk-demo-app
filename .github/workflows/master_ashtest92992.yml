@@ -35,7 +35,7 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'ashtest92992'
+        app-name: ${{ env.APP_SERVICE }}
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_a9a49934edcd41a2a6e53381ad42f82c }}
         package: .
