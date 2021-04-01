@@ -29,7 +29,7 @@ jobs:
     - name: Azure Login
       uses: Azure/Login@v1
       with:
-        creds: ${{ secrets.AZURE_CREDENDTIALS }}
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     
     - name: Create Azure App Service Plan
       uses: Azure/cli@1.0.4
