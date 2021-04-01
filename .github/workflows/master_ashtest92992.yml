@@ -9,13 +9,6 @@ on:
       - master
   workflow_dispatch:
 
-env:
-  AZURE_WEBAPP_PACKAGE_PATH: '.'
-  NODE_VERSION: '12.x'
-  RESOURCE_GROUP_NAME: 'AZ-400'
-  APP_SERVICE_PLAN: 'cloudskillssoma'
-  APP_SERVICE: 'cloudskillssoma
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -42,7 +35,7 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
-        app-name: ${{ env.APP_SERVICE }}
+        app-name: 'cloudskillssoma'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_a9a49934edcd41a2a6e53381ad42f82c }}
         package: .
